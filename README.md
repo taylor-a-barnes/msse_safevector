@@ -38,7 +38,7 @@ Inside this repository, you will find an `src/main.cpp` file that performs some 
 Change `int_vec`, `double_vec`, and `list_vec` from being instances of `std::vector` to being instances of a new template class called `SafeVector`.
 `SafeVector` must use composition to support all the functionality of `std::vector` that is required by the tests in `src/main.cpp`, while also implementing out-of-bounds checking for the subscript operator.
 It must throw an appropriate exception when an out-of-bounds access is attempted through the subscript operator.
-Your `SafeVector::push_back` method must properly support move semantics.
+Your `SafeVector` class must properly handle `const` vectors, and your `SafeVector::push_back` method must properly support move semantics.
 
 The only change you are permitted to make within the `main` function is to change the `std::vector` types to `SafeVector` types.
 In other words, you should modify the declaration of the vectors to:
