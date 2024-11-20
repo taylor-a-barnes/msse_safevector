@@ -9,7 +9,7 @@ This means that any use of the vector subscript operator - which is used far mor
 In this problem, you will create a custom vector class that performs an out-of-bounds check for the subscript operator, and throws an exception when an attempt is made to access the vector out-of-bounds.
 There are a few ways you could *imagine* creating a class of this sort:
 
-1. By creating an entirely new class that does not reuse any code from `std::vector`.
+1. By creating an entirely new implementation of vector functionality that does not reuse any code from `std::vector`.
 2. By inheriting from the `std::vector` class.
 3. By using composition, with an `std::vector` being a **member** of a new class that does **not** inherit from `std::vector`.
 
