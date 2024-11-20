@@ -29,7 +29,7 @@ int main() {
   try {
     // If these lines print, your vector is NOT memory-safe
     std::cout << "  Attempting to access int_vec out-of-bounds: " << int_vec[int_vec.size()] << std::endl;
-    std::cout << "  Oh no! The vector was accessed out-of-bounds!" << std::endl;
+    std::cout << "  Oh no! The vector was accessed out-of-bounds and is NOT memory-safe!" << std::endl;
   }
   catch (const std::out_of_range& e) {
     // If your vector is memory-safe, this error message should print
@@ -43,7 +43,7 @@ int main() {
   try {
     // If these lines print, your vector is NOT memory-safe
     std::cout << "  Attempting to access double_vec out-of-bounds: " << double_vec[-1] << std::endl;
-    std::cout << "  Oh no! The vector was accessed out-of-bounds!" << std::endl << std::endl;
+    std::cout << "  Oh no! The vector was accessed out-of-bounds and is NOT memory-safe!" << std::endl;
   }
   catch (const std::out_of_range& e) {
     // If your vector is memory-safe, this error message should print
@@ -68,7 +68,7 @@ int main() {
 
     // If the move was correct, the two pointers should be the same
     if ( final_int_ptr != original_int_ptr ) {
-      std::cout << "Oh no! Your vector does not properly support move semantics!" << std::endl;
+      std::cout << "Oh no! Your vector does NOT properly support move semantics!" << std::endl;
     }
   }
 
@@ -89,7 +89,7 @@ int main() {
   try {
     // If these lines print, your vector is NOT memory-safe
     std::cout << "  Attempting to access double_vec out-of-bounds: " << double_vec[-1] << std::endl;
-    std::cout << "  Oh no! The vector was accessed out-of-bounds!" << std::endl << std::endl;
+    std::cout << "  Oh no! The vector was accessed out-of-bounds and is NOT memory-safe!" << std::endl;
   }
   catch (const std::out_of_range& e) {
     // If your vector is memory-safe, this error message should print
