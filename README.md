@@ -11,7 +11,7 @@ There are a few ways you could *imagine* creating a class of this sort:
 
 1. By creating an entirely new implementation of vector functionality that does not reuse any code from `std::vector`.
 2. By inheriting from the `std::vector` class.
-3. By using composition, with an `std::vector` being a **member** of a new class that does **not** inherit from `std::vector`.
+3. By using composition in which you create a new class that does **not** inherit from `std::vector`, but includes an `std::vector` as a class **member**.
 
 Option (1) is not good solution, as it would require essentially completely recreating the code for an `std::vector`, with minor modifications.
 Option (2) might *seem* like the obvious choice, but it really isn't.
