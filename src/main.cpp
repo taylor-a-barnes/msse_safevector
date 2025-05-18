@@ -15,6 +15,17 @@ int main() {
      DO NOT EDIT ANYTHING PAST THIS POINT!
      ------------------------------------- */
 
+  // Check if the back() method is memory-safe
+  try {
+    // If these lines print, your vector is NOT memory-safe
+    std::cout << "  Attempting to access int_vec prior to initialization: " << int_vec.back() << std::endl;
+    std::cout << "  Oh no! The vector was accessed out-of-bounds and is NOT memory-safe!" << std::endl << std::endl;
+  }
+  catch (const std::out_of_range& e) {
+    // If your vector is memory-safe, this error message should print
+    std::cerr << "  Error: " << e.what() << std::endl << std::endl;
+  }
+  
   // Initialize the vector of integers
   if ( int_vec.empty() ) {
     for (int i = 0; i < 100; i++) {
